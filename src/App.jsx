@@ -6,7 +6,7 @@ import { Header } from "./components/Header/Header"
 import { Modal } from "./components/Modal/Modal"
 import { Quiz } from "./components/Quiz/Quiz";
 
-const initialProject = projects[0]
+const initialProject = projects[0];
 
 function App() {
     const [project, setProject] = useState(initialProject);
