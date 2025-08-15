@@ -29,12 +29,7 @@ const Result = ({ correct }) => {
     );
 }
 
-const checkAnswer = (index, question, correct, setCorrect, step, setStep) => {
-    index === question.correct ? setCorrect(correct + 1) : correct;
-    setStep(step + 1);
-}
-
-const Game = ({ question, step, setStep, correct, setCorrect }) => {
+const Game = ({ question, step, checkAnswer }) => {
     const percent = Math.floor(step / questions.length * 100);
 
     return (
@@ -46,7 +41,7 @@ const Game = ({ question, step, setStep, correct, setCorrect }) => {
             <h1>{question.title}</h1>
             <ul>
                 {question.variants.map((item, index) => {
-                    return <li onClick={() => checkAnswer(index, question, correct, setCorrect, step, setStep)} key={item}>{item}</li>
+                    return <li onClick={() => checkAnswer(index)} key={item}>{item}</li>
                 })}
             </ul>
         </div>
@@ -58,11 +53,18 @@ export const Quiz = () => {
     const question = questions[step];
     const [correct, setCorrect] = useState(0);
 
+    const checkAnswer = (index) => {
+        if (index === question.correct) {
+            setCorrect(correct + 1)
+        }
+        setStep(step + 1);
+    }
+
     return (
         <section className={styles.AppQuiz}>
             <div className="container">
                 <div className={styles.wrapper}>
-                    {step !== questions.length ? <Game question={question} step={step} setStep={setStep} correct={correct} setCorrect={setCorrect} /> : <Result correct={correct} />}
+                    {step !== questions.length ? <Game question={question} step={step} checkAnswer={checkAnswer} /> : <Result correct={correct} />}
                 </div>
             </div>
         </section>
