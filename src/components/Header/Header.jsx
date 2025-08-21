@@ -2,9 +2,9 @@ import { } from 'react';
 import { projects } from '../../projects/projects';
 import styles from "./Header.module.css"
 
-const ItemClickHandler = (item, setProject) => {
+const itemClickHandler = (item, setProject) => {
     document.body.classList = "";
-    document.body.classList.add(item);
+    document.body.classList.add(item.split(" ").join(""));
     setProject(item)
 }
 
@@ -16,7 +16,7 @@ export const Header = ({ project, setProject }) => {
                     <h1>React Projects</h1>
                     <ul className={styles.menu}>
                         {projects.map(item => {
-                            return <li className={`${styles.menuItem} ${project === item ? styles.active : ""}`} onClick={() => ItemClickHandler(item, setProject)} key={item}>{item}</li>
+                            return <li className={`${styles.menuItem} ${project === item ? styles.active : ""}`} onClick={() => itemClickHandler(item, setProject)} key={item}>{item}</li>
                         })}
                     </ul>
                 </div>

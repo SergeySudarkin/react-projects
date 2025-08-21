@@ -1,0 +1,78 @@
+.block {
+	width: 450px;
+
+	input {
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		font-size: 3rem;
+		font-weight: bold;
+		padding: 20px 20px;
+		letter-spacing: 1.3px;
+		outline: none;
+		margin-top: 20px;
+		border-radius: 5px;
+		width: 100%;
+	}
+}
+
+.currencies {
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	overflow: hidden;
+
+	p {
+		height: 100%;
+		padding: 10px 20px;
+		border-right: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	select {
+		height: 100%;
+		appearance: none;
+		flex-grow: 2;
+		padding: 10px 20px;
+		outline: none;
+		border-right: 1px solid rgba(0, 0, 0, 0.1);
+		opacity: 1;
+
+		option {
+			color: black;
+		}
+	}
+
+	.arrow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+		padding: 10px 20px;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	.arrow {
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.03);
+		}
+
+		&:active {
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+	}
+
+	svg {
+		height: 16px;
+		width: 16px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.block {
+		width: 100%;
+	}
+}

@@ -6,6 +6,7 @@ import { Header } from "./components/Header/Header"
 import { Modal } from "./components/Modal/Modal"
 import { Quiz } from "./components/Quiz/Quiz";
 import { UsersWrapper } from "./components/UsersWrapper/UsersWrapper";
+import { CurrencyConvertor } from "./components/CurrencyConvertor/CurrencyConvertor";
 
 const initialProject = projects[0];
 
@@ -21,6 +22,7 @@ function App() {
                 {project === projects[0] ? <Modal /> : null}
                 {project === projects[1] ? <Quiz /> : null}
                 {project === projects[2] ? <UsersWrapper /> : null}
+                {project === projects[3] ? <CurrencyConvertor /> : null}
             </main>
         </>
     )

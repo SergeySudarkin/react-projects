@@ -5,3 +5,4 @@
 - Modal
 - Quiz
 - Users
+- Currency Convertor
