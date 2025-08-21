@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+.AppCurrencyConvertor {
+	font-family: "Inter", system-ui;
+	margin-top: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper {
+	width: fit-content;
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: #fff;
+	padding: 30px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+	border-radius: 15px;
+
+	.descRates {
+		font-size: 22px;
+		font-weight: 500;
+	}
+}
+
+.swap {
+	background-color: rgb(251, 80, 0);
+	padding: 16px 15px;
+	border-radius: 15px;
+	font-size: 16px;
+	color: #fff;
+	width: 150px;
+	border: 0;
+	outline: none;
+	box-shadow: 0 7px 10px rgba(251, 80, 0, 0.4);
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+
+	&:hover {
+		background-color: rgb(255, 97, 24);
+	}
+
+	&:active {
+		transform: translateY(2px);
+		box-shadow: none;
+	}
+}
+
+@media (max-width: 1200px) {
+	.wrapper {
+		max-width: 800px;
+	}
+
+	.swap {
+		width: 300px;
+	}
+}

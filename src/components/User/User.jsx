@@ -4,7 +4,7 @@ import logoPlus from "../../assets/Users/plus.svg"
 import logoMinus from "../../assets/Users/minus.svg"
 
 export const User = ({ item, invites, checkInvite }) => {
-    return <li>
+    return <li className={styles.user}>
         <div>
             <img className={styles.avatar} src={item.avatar} alt="User" />
             <div>
