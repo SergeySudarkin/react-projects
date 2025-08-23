@@ -1,0 +1,47 @@
+.collection {
+	width: 100%;
+	justify-self: center;
+	max-width: 470px;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 30px;
+	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+
+	h4 {
+		margin: 0;
+		margin-top: 15px;
+		font-size: 20px;
+		font-family: "Merriweather", serif;
+	}
+
+	&:hover {
+		box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+		transform: translateY(-5px);
+	}
+
+	img {
+		object-fit: cover;
+	}
+
+	.collectionBig {
+		height: 250px;
+		width: 100%;
+		border-radius: 20px;
+		margin-bottom: 15px;
+	}
+
+	.collectionBottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 5px;
+	}
+
+	.collectionMini {
+		width: 31%;
+		height: 80px;
+		border-radius: 20px;
+	}
+}

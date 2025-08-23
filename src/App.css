@@ -24,6 +24,10 @@ body {
 	background-color: #f9f2ed;
 }
 
+.PhotoCollection {
+	background-color: #eff0f1;
+}
+
 .container {
 	max-width: 1230px;
 	margin: 0 auto;
