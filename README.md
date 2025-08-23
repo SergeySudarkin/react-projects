@@ -6,3 +6,4 @@
 - Quiz
 - Users
 - Currency Convertor
+- Photo Collection

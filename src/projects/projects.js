@@ -1,1 +1,1 @@
-export const projects = ["Modal", "Quiz", "Users", "Currency Convertor"];
+export const projects = ["Modal", "Quiz", "Users", "Currency Convertor", "Photo Collection"];
